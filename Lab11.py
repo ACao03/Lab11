@@ -54,7 +54,7 @@ def main():
             count += 1
         avg = total / count
         print(f"Min: {value[0]}%\n"
-              f"Average: {int(avg)}%\n"
+              f"Avg: {int(avg)}%\n"
               f"Max: {value[-1]}%\n")
     elif opt == 3:
         value = assignments()
