@@ -23,6 +23,7 @@ def menu():
 def main():
     while True:
         menu()
+        opt = 0
         opt = int(input("Enter your selection: "))
         total = 0
         count = 0
@@ -46,8 +47,6 @@ def main():
                         grades.close()
                     avg = total / count
                     print(f"{round(avg)}%")
-                else:
-                    print("Invalid Student")
             file.close()
         elif opt == 2:
             value = assignments()
