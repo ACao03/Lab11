@@ -28,7 +28,7 @@ def inputs(qstn, default=None):
 def main():
     while True:
         menu()
-        opt = inputs("Enter your selection: ", 1)
+        opt = int(inputs("Enter your selection: ", 1))
         total = 0
         count = 0
         if opt == 1:
