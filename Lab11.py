@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 def assignments():
     value = []
-    asmt = input("What is the assignment name: ")
+    asmt = inputs("What is the assignment name: ")
     asmts = open("data/assignments.txt")
     for id in asmts:
         if asmt == id.strip():
@@ -20,17 +20,19 @@ def menu():
     print("1. Student grade\n"
           "2. Assignment statistics\n"
           "3. Assignment graph\n")
+def inputs(qstn, default=None):
+    try:
+        return input(qstn)
+    except EOFError:
+        return default
 def main():
     while True:
         menu()
-        try:
-            opt = int(input("Enter your selection: "))
-        except EOFError:
-            opt = 1
+        opt = inputs("Enter your selection: ", 1)
         total = 0
         count = 0
         if opt == 1:
-            student = input("What is the student's name: ")
+            student = inputs("What is the student's name: ")
             file = open("data/students.txt")
             for line in file:
                 if student == line[3:].strip():
