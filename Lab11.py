@@ -23,8 +23,10 @@ def menu():
 def main():
     while True:
         menu()
-        opt = 0
-        opt = int(input("Enter your selection: "))
+        try:
+            opt = int(input("Enter your selection: "))
+        except EOFError:
+            opt = 1
         total = 0
         count = 0
         if opt == 1:
