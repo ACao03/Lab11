@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 def assignments():
     value = []
-    asmt = inputs("What is the assignment name: ")
+    asmt = input("What is the assignment name: ")
     asmts = open("data/assignments.txt")
     for id in asmts:
         if asmt == id.strip():
